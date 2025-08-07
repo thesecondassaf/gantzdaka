@@ -13,9 +13,11 @@ app.use(express.json());
 // Routes
 const authRoutes = require('./routes/auth');
 const protectedRoutes = require('./routes/protected');
+const publicRoutes = require('./routes/public');
 
 app.use('/auth', authRoutes);
 app.use('/protected', protectedRoutes);
+app.use('/', publicRoutes);
 
 mongoose
   .connect(mongoUri, {
