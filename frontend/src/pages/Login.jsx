@@ -29,9 +29,12 @@ export default function Login() {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Login</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
+    <div className="p-4 text-center">
+      <h1 className="text-3xl font-bold mb-4 text-orange-800 flex justify-center items-center space-x-2">
+        <span role="img" aria-label="login">🔐</span>
+        <span>Login</span>
+      </h1>
+      <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
         <input
           className="border p-2 w-full"
           name="email"
@@ -47,8 +50,8 @@ export default function Login() {
           onChange={handleChange}
           placeholder="Password"
         />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-          Login
+        <button type="submit" className="bg-orange-500 text-white px-4 py-2 rounded">
+          <span role="img" aria-label="login">🔐</span> Login
         </button>
       </form>
       {status && <p className="mt-4">{status}</p>}

@@ -3,6 +3,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 export default function App() {
   const path = window.location.pathname;
@@ -25,15 +27,12 @@ export default function App() {
   }
 
   return (
-    <div>
-      <nav className="p-4 bg-gray-100 flex space-x-4">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/register">Register</a>
-        <a href="/login">Login</a>
-      </nav>
-      <Page />
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
+        <Page />
+      </main>
+      <Footer />
     </div>
   );
 }

@@ -48,9 +48,12 @@ export default function Register() {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Gan Registration</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
+    <div className="p-4 text-center">
+      <h1 className="text-3xl font-bold mb-4 text-orange-800 flex justify-center items-center space-x-2">
+        <span role="img" aria-label="register">📝</span>
+        <span>Gan Registration</span>
+      </h1>
+      <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
         <input
           className="border p-2 w-full"
           name="name"
@@ -100,8 +103,8 @@ export default function Register() {
             </label>
           ))}
         </div>
-        <button type="submit" className="bg-green-500 text-white px-4 py-2">
-          Register
+        <button type="submit" className="bg-orange-500 text-white px-4 py-2 rounded">
+          <span role="img" aria-label="register">📝</span> Register
         </button>
       </form>
       {status && <p className="mt-4">{status}</p>}
