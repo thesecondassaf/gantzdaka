@@ -10,6 +10,13 @@ const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/gan_tzedaka
 app.use(cors());
 app.use(express.json());
 
+// Routes
+const authRoutes = require('./routes/auth');
+const protectedRoutes = require('./routes/protected');
+
+app.use('/auth', authRoutes);
+app.use('/protected', protectedRoutes);
+
 mongoose
   .connect(mongoUri, {
     useNewUrlParser: true,
