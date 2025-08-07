@@ -29,9 +29,12 @@ export default function Contact() {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
+    <div className="p-4 text-center">
+      <h1 className="text-3xl font-bold mb-4 text-orange-800 flex justify-center items-center space-x-2">
+        <span role="img" aria-label="contact">📧</span>
+        <span>Contact Us</span>
+      </h1>
+      <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
         <input
           className="border p-2 w-full"
           name="name"
@@ -53,8 +56,8 @@ export default function Contact() {
           onChange={handleChange}
           placeholder="Message"
         />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-          Send
+        <button type="submit" className="bg-orange-500 text-white px-4 py-2 rounded">
+          <span role="img" aria-label="send">📨</span> Send
         </button>
       </form>
       {status && <p className="mt-4">{status}</p>}
